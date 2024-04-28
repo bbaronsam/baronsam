@@ -8,27 +8,17 @@
     <title>Baron Sam Portfolio</title>
     <link rel="stylesheet" href="foli.css">
     <meta name="author" content="Claire Rebecca J">
-   function redirectToDesktopSite() {
-    // Log viewport width for debugging (remove in production)
-    console.log("Viewport width:", window.innerWidth);
-
-    // Check if the viewport width is less than a specified threshold (e.g., 600 pixels)
-    if (window.innerWidth < 600) {
-        // Prompt user with an alert to switch to the desktop version
-        var switchToDesktop = confirm("You are viewing the mobile version of this site. Do you want to switch to the desktop version?");
-
-        // If user confirms, redirect to the desktop version of the site
-        if (switchToDesktop) {
-            window.location.href = "https://bbaronsam.github.io/baronsam.io/";
-        }
-    }
-}
-
-// Call the redirection function when the page finishes loading
-window.onload = redirectToDesktopSite;
+     <script src="redirect.js"></script>
+    <script>
+        function myfunc()
+            {
+                alert("Use desktop site or use it in Landscape mode");
+                 window.onload = displayAlert;
+            }
+    </script>
 </head>
 
-<body>
+<body onload=myfunc()>
  <header class="d1">  
  <div class="d1">
     <b class="port">PORTFOLIO</b>
